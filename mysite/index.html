@@ -4,21 +4,113 @@
 	<meta charset="utf-8">
 	<title>Rholy Crochets</title>
 	<style>
-		p {
-			color: darkcyan;
+
+		/*applies to all p and ol elements*/
+		p, ol {
+			color: black;
 			font-size: 18px;
 			width: 1000px;
 
 		}
 
+		/*applies to all h1 elements*/
 		h1 {
 			color: darkgreen;
 			font-size: 22px;
 		}
 
+		/*to all h4 elements*/
 		h4 {
 			text-align: center;
+			font-weight: bold;
 		}
+
+		/*to highlight pink and make italic. tried hier on footer*/
+		.surligner {
+			font-size: 18px;
+			font-style: italic;
+			font-weight: bold;
+			background-color: pink;
+			opacity: .4
+		}
+
+		/*to make black. tried on 'want to go back on top' paragraph*/
+		.black {
+			color: black;
+		}
+
+		/*apply specific changes to tag with id 'top'. tried on 'Bienvenue sur Rholy Crochet'*/
+		#top {
+			font-size: 18px;
+			background-color: pink;
+			font-style: italic;
+			font-weight: bold;
+			opacity: .6
+		}
+
+		/*apply to element with both 'p' and 'black'. tried on paragraphs'je me suis bien...'and'wanttogo back ontop'*/
+		p.black {
+			font-style: italic;
+		}
+
+		/*apply to all 'a' that are direct child of 'li'. tried on the links on top of the page*/
+		li > a {
+			font-style: italic;
+		}
+
+		/*apply to all li inside h1 (direct child or not). tried on Back to top, Facebook and Researchgate*/
+		div a {
+			color: orange;
+		}
+
+
+
+		/*PSEUDO CLASS SELECTORS*/
+		/* 1- Remove bullet points from unodered list. tried on links in header on top page*/
+		header li {
+			list-style: none;
+		}
+
+		/* 2- Style a link and make it look like aa button. tried on header*/
+		header a:link, header a:visited {
+			text-decoration: none; /*removes underline*/
+			background-color: lightgreen; /*add background*/
+			border: 1px solid orange;
+			color: black;
+			display: block; /*par opposition a line. The background box color will now cover the entire line*/
+			width: 230px;
+			text-align: center;
+			margin-bottom: 2px /*add margin at bottom of each background box*/
+		}
+
+
+	/*what happens when user hover (roll over) or press on a button. tried on header*/
+		header a:hover, header a:active {
+			background-color: brown;
+			color: darkblue;
+			opacity: .7
+		}
+
+
+	/*target a specific nth element in a list. tried on 5th element of header which is 'Nous contacter'*/
+		header li:nth-child(5) {
+			font-size: 24px
+	}
+
+
+	/*set background color to some elements of a list(odered or not). tried on odd elements of Nos partenaires*/
+		ol li:nth-child(odd) {
+			background-color: grey;
+		}
+
+
+	/*combine selectors and pseudo-selectors. tried to set behaviour of 3rd element of Nos partenaires*/
+		ol li:nth-child(3):hover {
+			background-color: brown;
+			color: darkblue;
+			cursor: pointer; /*there are many cursor options: crosshair, wait, all-scroll...*/
+			opacity: .7
+	}
 
 	</style>
 </head>
@@ -27,7 +119,7 @@
 	<p>
 		<img src="IMG_20210802_152738.jpg" width="270" height="350" alt="picture Rholan">
 	</p>
-	<section>
+	<header>
 		<ul>
 			<!--Links to page sections-->
 			<li><a href="#la boutique">La boutique</a></li>
@@ -36,7 +128,7 @@
 			<li><a href="#nos partenaires">Nos partenaires</a></li>
 			<li><a href="#nous contacter">Nous contacter</a></li>
 		</ul>
-	</section>
+	</header>
 	<div>Faites comme chez vous!</div>
 <section id="la boutique">
 	<h1>La boutique</h1>
@@ -56,6 +148,7 @@
 	<ul>
 		<li>Crop-top été</li>
 		<li>Bonnet</li>
+		<li>Echarpes</li>
 		<li>Sacs à main
 			<ul>
 				<li>Femme d'influence</li>
@@ -70,13 +163,13 @@
 	<h4>Mes débuts au crochet</h4>
 	<p>
 		De chercheur scientifique (phyisicienne, climatologue, hydrologue-modelisateur des eaux de surface) au crochet, ce fut un long parcours. Rien ne me prédestinait apparement à faire du crochet. Et... pendant que j'y pense j'ai du mal à situer dans le temps quand exactement est-ce que mon amour du crochet a débuté. Je cherchais à réaliser des choses uniques, j'avais besoin de ce sentiment de satisfaction et de bonheur que cela procure de se sentir utile et surtout de voir que je suis capable de réaliser ce que j'imaginais. J'ai donc décidé d'explorer mon pouvoir imaginatif et créateur.
-		<div>
-			Inutile de vous dire que j'ai galéré. Je n'avais aucune expérience, alors vraiment aucune. Du haut de mes 26 ans je n'avais jamais vu ni tenue de crochet de toute ma vie. J'ai acheté un kit de réalisation de jouet lapin pour enfant. Ce fut un désastre :). A force d'essayer, de réessayer, de rereessayer, de rerere... j'ai fini le fil dans le kit sans réaliser l'ouvrage. Ce fil m'a plutôt servi à apprendre quelques notions de base: comment faire un noeud en début de chainette, maille serrée, bride... Tous ces termes étaient comme du chinois, donc pour faire simple et pour ne pas devenir folle, je me contentais de regarder très minutieusement des tutos d'ouvrage en me concentrant sur le mouvement de mains et de doigts de la personne qui réalisait l'ouvrage. Donc tout ouvrage combinant plusieurs type de point était une vrai galère pour moi. Pour mes débuts je faisais donc attention à ne sélectionner que des tutos très simples, soit uniquement en mail serrées ou uniquement en bride. Je me suis traduite les termes en langage facile; par exemple, une bride c'est lorsqu'on fait un jeté sur le crochet puis on sort le fil à travers deux boucles, ensuite à travers deux boucles. Ainsi, mon premier ouvrage fut une couverture, toute en bride; et tenez-vous bien, j'ai mis plus de deux mois à la réaliser. Ensuite j'ai fait un bonnet, puis un sac, puis une jupette, puis... puis... puis plein d'autres choses.
-			Le crochet était presque une addiction, en fait cela me procurait une paix sans pareil. Aujourd'hui encore je ressens cette tranquilité et ce bonheur lorsque je fais du crochet.
-		</div>
+	</p>
+	<p>
+		Inutile de vous dire que j'ai galéré. Je n'avais aucune expérience, alors vraiment aucune. Du haut de mes 26 ans je n'avais jamais vu ni tenue de crochet de toute ma vie. J'ai acheté un kit de réalisation de jouet lapin pour enfant. Ce fut un désastre :). A force d'essayer, de réessayer, de rereessayer, de rerere... j'ai fini le fil dans le kit sans réaliser l'ouvrage. Ce fil m'a plutôt servi à apprendre quelques notions de base: comment faire un noeud en début de chainette, maille serrée, bride... Tous ces termes étaient comme du chinois, donc pour faire simple et pour ne pas devenir folle, je me contentais de regarder très minutieusement des tutos d'ouvrage en me concentrant sur le mouvement de mains et de doigts de la personne qui réalisait l'ouvrage. Donc tout ouvrage combinant plusieurs type de point était une vrai galère pour moi. Pour mes débuts je faisais donc attention à ne sélectionner que des tutos très simples, soit uniquement en mail serrées ou uniquement en bride. Je me suis traduite les termes en langage facile; par exemple, une bride c'est lorsqu'on fait un jeté sur le crochet puis on sort le fil à travers deux boucles, ensuite à travers deux boucles. Ainsi, mon premier ouvrage fut une couverture, toute en bride; et tenez-vous bien, j'ai mis plus de deux mois à la réaliser. Ensuite j'ai fait un bonnet, puis un sac, puis une jupette, puis... puis... puis plein d'autres choses.
+		Le crochet était presque une addiction, en fait cela me procurait une paix sans pareil. Aujourd'hui encore je ressens cette tranquilité et ce bonheur lorsque je fais du crochet.
 	</p>
 	<h4>Et aujourd'hui... &quot;le jeu en valait la chandelle&quot;!</h4>
-	<p>
+	<p class="black">
 		Je me suis bien améliorée au fil des mois et des années. Je me suis formée et je prends du plaisir à exprimer ma créativité à travers mes ouvrages. J'ai créé cette page pour partager et transmettre mon amour du crochet, mais également pour apprendre de vous à travers vos commentaires. Aujourd'hui, Rholy crochet vous propose divers services pour réaliser des merveilles au crochet. Nous mettons à votre disposition du matériel de qualité pour réaliser vos ouvrages: laines, coton, trapihlo, crochet, aiguille, rembourrage, et divers accessoires. Nous vous proposons également de jolies ouvrages réaliser avec les produits de notre boutique: sacs à mais, bikini, robes, couvertures, bonnets, châle, boîte à bijoux, chaussons pour enfants, et pleins d'autres articles. Tout ce que vous imaginez, nous le réalisons.
 	</p>
 </section>
@@ -86,6 +179,9 @@
 	<ol>
 		<li>HK367 Concept</li>
 		<li>HR Fabrics</li>
+		<li>Z & Co</li>
+		<li>Sed Entertainment</li>
+		<li>Rho Design</li>
 	</ol>
 </section>
 <section id="nous contacter">
@@ -101,10 +197,10 @@
 		</div>
 </section>
 <div>
-	<p>
+	<p class="black">
 		Want to go back to top? <a href="#top">Back to top</a>
 	</p>
 </div>
-<footer>Rholy Crochets. &copy; 2021</footer>
+<footer , class="surligner">Rholy Crochets. &copy; 2021</footer>
 </body>
 </html>
