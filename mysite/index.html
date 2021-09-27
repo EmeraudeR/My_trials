@@ -3,117 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Rholy Crochets</title>
-	<style>
-
-		/*applies to all p and ol elements*/
-		p, ol {
-			color: black;
-			font-size: 18px;
-			width: 1000px;
-
-		}
-
-		/*applies to all h1 elements*/
-		h1 {
-			color: darkgreen;
-			font-size: 22px;
-		}
-
-		/*to all h4 elements*/
-		h4 {
-			text-align: center;
-			font-weight: bold;
-		}
-
-		/*to highlight pink and make italic. tried hier on footer*/
-		.surligner {
-			font-size: 18px;
-			font-style: italic;
-			font-weight: bold;
-			background-color: pink;
-			opacity: .4;
-			text-align: center;
-		}
-
-		/*to make black. tried on 'want to go back on top' paragraph*/
-		.black {
-			color: black;
-		}
-
-		/*apply specific changes to tag with id 'top'. tried on 'Bienvenue sur Rholy Crochet'*/
-		#top {
-			font-size: 18px;
-			background-color: pink;
-			font-style: italic;
-			font-weight: bold;
-			opacity: .6
-		}
-
-		/*apply to element with both 'p' and 'black'. tried on paragraphs'je me suis bien...'and'wanttogo back ontop'*/
-		p.black {
-			font-style: italic;
-		}
-
-		/*apply to all 'a' that are direct child of 'li'. tried on the links on top of the page*/
-		li > a {
-			font-style: italic;
-		}
-
-		/*apply to all li inside h1 (direct child or not). tried on Back to top, Facebook and Researchgate*/
-		div a {
-			color: orange;
-		}
-
-
-
-		/*PSEUDO CLASS SELECTORS*/
-		/* 1- Remove bullet points from unodered list. tried on links in header on top page*/
-		header li {
-			list-style: none;
-		}
-
-		/* 2- Style a link and make it look like aa button. tried on header*/
-		header a:link, header a:visited {
-			text-decoration: none; /*removes underline*/
-			background-color: lightgreen; /*add background*/
-			border: 1px solid orange;
-			color: black;
-			display: block; /*par opposition a line. The background box color will now cover the entire line*/
-			width: 230px;
-			text-align: center;
-			margin-bottom: 2px /*add margin at bottom of each background box*/
-		}
-
-
-	/*what happens when user hover (roll over) or press on a button. tried on header*/
-		header a:hover, header a:active {
-			background-color: brown;
-			color: darkblue;
-			opacity: .7
-		}
-
-
-	/*target a specific nth element in a list. tried on 5th element of header which is 'Nous contacter'*/
-		header li:nth-child(5) {
-			font-size: 24px
-	}
-
-
-	/*set background color to some elements of a list(odered or not). tried on odd elements of Nos partenaires*/
-		ol li:nth-child(odd) {
-			background-color: grey;
-		}
-
-
-	/*combine selectors and pseudo-selectors. tried to set behaviour of 3rd element of Nos partenaires*/
-		ol li:nth-child(3):hover {
-			background-color: brown;
-			color: darkblue;
-			cursor: pointer; /*there are many cursor options: crosshair, wait, all-scroll...*/
-			opacity: .7
-	}
-
-	</style>
+	<link rel="stylesheet" href="mysite_style.css">
 </head>
 <body>
 	<h4 id="top">Bienvenue sur Rholy Crochet</h4>
@@ -127,7 +17,7 @@
 			<li><a href="#tutos">Tutos</a></li>
 			<li><a href="#a propos de nous">A propos de nous</a></li>
 			<li><a href="#nos partenaires">Nos partenaires</a></li>
-			<li><a href="#nous contacter">Nous contacter</a></li>
+			<li><a href="#nous contacter">Nous contacter sur nos divers réseaux</a></li>
 		</ul>
 	</header>
 	<div>Faites comme chez vous!</div>
