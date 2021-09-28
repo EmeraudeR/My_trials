@@ -58,6 +58,10 @@ p.black {
 	font-style: italic;
 	}
 
+p.clearit {
+	font-style: italic;
+}
+
 /* apply to all 'a' that are direct child of 'li'. tried on the links on top of the page*/
 li > a {
 	font-style: italic;
