@@ -1,11 +1,17 @@
 body {
 	padding: 70px;
+	/*background-image: url("crochet_yarn.jpg");*/
+	background-size: 100% 100%;
+	background-blend-mode: luminosity;
+}
+
+.clearit {
+	clear: right;
 }
 
 p, ol {
 	color: black;
 	font-size: 120%;
-	width: 1500px;
 	text-align: justify;
 	margin-bottom: 40px
 
